@@ -131,8 +131,10 @@ def draw_a_picture(point, n, color, window):
     circle = rg.Circle(point, 100)
     circle.attach_to(window)
     window.render()
+    rect = rg.Rectangle(rg.Point(point.x + 80, point.y - 40), rg.Point(point.x - 80, point.y + 40))
+    rect.attach_to(window)
+    window.render()
     window.close_on_mouse_click()
-
     pass
 
 
