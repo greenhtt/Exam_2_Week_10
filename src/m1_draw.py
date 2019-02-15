@@ -132,7 +132,22 @@ def draw_a_picture(point, n, color, window):
     circle.attach_to(window)
     window.render()
     rect = rg.Rectangle(rg.Point(point.x + 80, point.y - 40), rg.Point(point.x - 80, point.y + 40))
+    rect.center = point
+    corner_1 = rg.Point(point.x + 80, point.y - 40)
+    corner_2 = rg.Point(point.x - 80, point.y - 40)
+    line1 = rg.Line(corner_1, corner_2)
+    point1 = rg.Point(point.x - 80, point.y + 40)
     rect.attach_to(window)
+    window.render()
+    for k in range (n+1):
+        line = rg.Line(point, corner_1)
+        corner_1.x = corner_1.x - (160/n)
+        line.color = color
+#        if k is is_prime:
+#            line.color = rg.Color('orange')
+#        else:
+#            line.color = color
+        line.attach_to(window)
     window.render()
     window.close_on_mouse_click()
     pass

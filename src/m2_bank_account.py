@@ -17,6 +17,10 @@ class Bank(object):
     """
 
     def __init__(self, name, initial_deposit, account_number):
+        self.name = name
+        self.initial_deposit = initial_deposit
+        self.account_number = account_number
+
         """
         What comes in:
           -- self
@@ -112,7 +116,7 @@ def run_test_init():
 # ---------------------------------------------------------------------
 # TODO: 3. Implement your test for the withdraw method below
 # ---------------------------------------------------------------------
-def run_test_withdrawal():
+def run_test_withdraw():
 # Implement at least two tests.  Use copy and paste to speed your coding.
     pass
 
