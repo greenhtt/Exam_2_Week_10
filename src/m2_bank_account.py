@@ -9,6 +9,7 @@ def main():
 
 
 class Bank(object):
+    #balance = initial_deposit - withdraw
     """
     A Bank has:
         -- NAME, a string that contains the last name of the bank account holder,
@@ -20,7 +21,9 @@ class Bank(object):
         self.name = name
         self.initial_deposit = initial_deposit
         self.account_number = account_number
-
+        #balance = 'str(' + str(self.name) +  '' + float(balance) + '' + str(self.account_number)')'
+# I tried to use the string example from when we created the point class for the first
+# time but could not get everything to line up so here is what I attempted at least
         """
         What comes in:
           -- self
@@ -110,9 +113,26 @@ def run_test_init():
         print_failure_message()
     print()
     # ---------------------------------------------------------------------
-    # TODO: 2. Add two more test cases for your Bank class below.
+    # DONE: 2. Add two more test cases for your Bank class below.
     # ---------------------------------------------------------------------
-
+    # Test 2:  Contents fit in the Box easily.
+    b2= Bank('Greenhoe', 20000, 'A2')
+    expected_name = 'Greenhoe'
+    expected_balance = 20000
+    expected_account_number = 'A2'
+    print("Expected:", expected_name, expected_balance, expected_account_number)
+    print("Actual:  ", b2.name, b2.balance, b2.account_number)
+    if (expected_name == b2.name) and (expected_balance == b2.balance) and (expected_account_number == b2.account_number):
+        print("Test passed SUCCESSFULLY!")
+    # Test 3:  Contents fit in the Box easily.
+    b3= Bank('Carreno', 30000, 'A3')
+    expected_name = 'Carreno'
+    expected_balance = 30000
+    expected_account_number = 'A3'
+    print("Expected:", expected_name, expected_balance, expected_account_number)
+    print("Actual:  ", b3.name, b3.balance, b3.account_number)
+    if (expected_name == b3.name) and (expected_balance == b3.balance) and (expected_account_number == b3.account_number):
+        print("Test passed SUCCESSFULLY!")
 # ---------------------------------------------------------------------
 # TODO: 3. Implement your test for the withdraw method below
 # ---------------------------------------------------------------------
