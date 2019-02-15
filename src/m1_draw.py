@@ -147,6 +147,7 @@ def draw_a_picture(point, n, color, window):
 #            line.color = rg.Color('orange')
 #        else:
 #            line.color = color
+#       comment line
         line.attach_to(window)
     window.render()
     window.close_on_mouse_click()
